@@ -16,7 +16,7 @@ return (
         <Swiper
         // install modules
         modules={[Navigation, Pagination, Scrollbar]}
-        spaceBetween={10}
+        // spaceBetween={0}
         slidesPerView={1}
         direction="horizontal"
         loop={true}
