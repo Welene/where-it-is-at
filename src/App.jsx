@@ -1,11 +1,12 @@
 import React from 'react';
 
-import Lottie from 'lottie-react';
-import animationData from './assets/loadingAnimation.json'; 
+// import Lottie from 'lottie-react';
+// import animationData from './assets/loadingAnimation.json'; 
 // LOADING ANIMASJON TIL SENERE
 // import Footer from './components/Footer/Footer';
-import HomePage from './pages/HomePage/HomePage';
+// import HomePage from './pages/HomePage/HomePage';
 import './index.css';
+import SwipeNav from './components/SwipeNavigation/SwipeNavigation';
 
 function App() {
   // let myName = 'Bob';
@@ -14,7 +15,7 @@ function App() {
   return (
     <>  
       <div className="app">
-        <HomePage/>
+        <SwipeNav/>
         {/* <h1 className="title">
           {myName} er {isCool ? '' : 'ikke'} kul
         </h1>

@@ -9,6 +9,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 import './swipeNavigation.css';
+import HomePage from '../../pages/HomePage/HomePage';
+
+import EventsPage from '../../pages/EventsPage/EventsPage';
 
 function SwipeNav() {
 return (
@@ -25,8 +28,12 @@ return (
         // scrollbar={{ draggable: true }}
         className="swipe-section__navigation"
         >
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <HomePage/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <EventsPage/> 
+        </SwiperSlide>
         <SwiperSlide></SwiperSlide>
         {/* Add more slides as needed */}
       </Swiper>
