@@ -9,6 +9,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 import './swipeNavigation.css';
+import HomePage from '../../pages/HomePage/HomePage';
+import EventsPage from '../../pages/EventsPage/EventsPage';
+import ConfirmationPage from '../../pages/ConfirmationPage/ConfirmationPage';
 
 function SwipeNav() {
 return (
@@ -16,7 +19,7 @@ return (
         <Swiper
         // install modules
         modules={[Navigation, Pagination, Scrollbar]}
-        spaceBetween={10}
+        // spaceBetween={0}
         slidesPerView={1}
         direction="horizontal"
         loop={true}
@@ -25,9 +28,15 @@ return (
         // scrollbar={{ draggable: true }}
         className="swipe-section__navigation"
         >
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <HomePage/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <EventsPage/> 
+        </SwiperSlide>
+        <SwiperSlide>
+          <ConfirmationPage/>
+        </SwiperSlide>
         {/* Add more slides as needed */}
       </Swiper>
     </section>

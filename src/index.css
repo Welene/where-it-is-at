@@ -1,6 +1,12 @@
+@font-face {
+  font-family: 'Sansita One';
+  src: url('./assets/fonts/SansitaOne.woff') format('truetype');
+}
+
 :root {
-  --primary-bg: #000000;
-  --secondary-bg: #ffffff;
+  --primary-bg: #231F42;
+  --secondary-bg: #F56B9A;
+  --heading-clr: #F56B9A;
 }
 
 * {
@@ -9,10 +15,44 @@
   padding: 0;
 }
 
+/* body {
+  font-family: 'Sansita One', sans-serif;
+} */
+
 .app {
-  background-color: #231F42;
+    background-color: var(--primary-bg);
+    max-width: 500px;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+/* .app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.page {
+  background-color: var(--primary-bg);
   max-width: 500px;
   width: 100%;
   min-height: 100vh;
   margin: 0 auto;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.main-section__quote {
+  color: white;
+  font-weight: 800;
+  text-align: center;
+  font-size: 1.5rem;
 }

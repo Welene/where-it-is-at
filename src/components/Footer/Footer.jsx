@@ -1,15 +1,17 @@
-import './footer.css';
-// IMPORTERE SwipeBar greier her
-import SwipeNav from '../SwipeNavigation/SwipeNavigation';
+// import './footer.css';
+// // IMPORTERE SwipeBar greier her
+// import SwipeNav from '../SwipeNavigation/SwipeNavigation';
 
-function Footer() {
+// function Footer() {
 
-  return (
-    <section className="footer-section">
-        {/* lese inn SwipeNav komponenten her */}
-       <SwipeNav/> 
-    </section>
-  );
-}
+//   return (
+//    <> 
+//       <section className="footer-section">
+//           {/* lese inn SwipeNav komponenten her */}
+//         <SwipeNav/> 
+//       </section>
+//     </>
+//   );
+// }
 
-export default Footer;
+// export default Footer;
