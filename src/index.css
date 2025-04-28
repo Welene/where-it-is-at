@@ -1,6 +1,12 @@
+@font-face {
+  font-family: 'Sansita One';
+  src: url('./assets/fonts/SansitaOne.woff') format('truetype');
+}
+
 :root {
   --primary-bg: #231F42;
   --secondary-bg: #F56B9A;
+  --heading-clr: #F56B9A;
 }
 
 * {
@@ -8,6 +14,10 @@
   margin: 0;
   padding: 0;
 }
+
+/* body {
+  font-family: 'Sansita One', sans-serif;
+} */
 
 .app {
     background-color: var(--primary-bg);

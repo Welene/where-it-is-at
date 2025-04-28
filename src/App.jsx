@@ -9,26 +9,19 @@ import './index.css';
 import SwipeNav from './components/SwipeNavigation/SwipeNavigation';
 
 function App() {
-  // let myName = 'Bob';
-  // let isCool = true;
 
   return (
     <>  
       <div className="app">
         <SwipeNav/>
-        {/* <h1 className="title">
-          {myName} er {isCool ? '' : 'ikke'} kul
-        </h1>
-
-        <Lottie
+        {/* <Lottie
           animationData={animationData}
           loop
           autoplay
           style={{ width: 300, height: 300 }}
-        />  */}
+        />   */}
         {/* LOADING ANIMASJON TIL SENERE */}
       </div>
-      {/* <Footer/> */}
     </>
   );
 }

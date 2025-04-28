@@ -10,8 +10,8 @@ import 'swiper/css/scrollbar';
 
 import './swipeNavigation.css';
 import HomePage from '../../pages/HomePage/HomePage';
-
 import EventsPage from '../../pages/EventsPage/EventsPage';
+import ConfirmationPage from '../../pages/ConfirmationPage/ConfirmationPage';
 
 function SwipeNav() {
 return (
@@ -34,7 +34,9 @@ return (
         <SwiperSlide>
           <EventsPage/> 
         </SwiperSlide>
-        <SwiperSlide></SwiperSlide>
+        <SwiperSlide>
+          <ConfirmationPage/>
+        </SwiperSlide>
         {/* Add more slides as needed */}
       </Swiper>
     </section>
