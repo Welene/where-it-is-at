@@ -8,7 +8,7 @@ function FetchAPI() {
     axios.get('https://santosnr6.github.io/Data/events.json')
       .then((response) => {
         console.log('Næh harru setthær va d data førr farsken', response.data); 
-        setData(response.data);
+        setData(response.data.events);
       })
       .catch((error) => {
         console.error('Something is wrong!!!', error);

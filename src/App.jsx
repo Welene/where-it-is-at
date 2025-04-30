@@ -7,7 +7,7 @@ import React from 'react';
 // import HomePage from './pages/HomePage/HomePage';
 import './index.css';
 import SwipeNav from './components/SwipeNavigation/SwipeNavigation';
-import FetchAPI from './api/FetchConcerts';
+// import FetchAPI from './api/FetchConcerts';
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
       <div className="app">
         <SwipeNav/>
         {/* FetchAPI er bare her i app nå for å teste om den funker */}
-        <FetchAPI/> 
+        {/* <FetchAPI/>  */}
         {/* <Lottie
           animationData={animationData}
           loop
