@@ -3,6 +3,26 @@
   src: url('./assets/fonts/SansitaOne.woff') format('truetype');
 }
 
+@font-face {
+  font-family: 'Fira Sans';
+  src: url('./assets/fonts/FiraSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fira Sans Italic';
+  src: url('./assets/fonts/FiraSans-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fira Sans Mixed';
+  src: url('./assets/fonts/FiraSans-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Fira Sans X-Light';
+  src: url('./assets/fonts/FiraSans-ExtraLight.ttf') format('truetype');
+}
+
 :root {
   --primary-bg: #231F42;
   --secondary-bg: #F56B9A;
