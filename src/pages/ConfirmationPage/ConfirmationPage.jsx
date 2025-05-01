@@ -1,13 +1,14 @@
 import React from 'react'
-import Heading from '../../components/Title/Title'
+import Header from '../../components/Header/Header'
 
 function ConfirmationPage() {
   return (
     <>
     <section className="page page-confirmation">
-          <main className='main-section'>
-            <Heading title="Tickets" className="main-section__heading" />
-          </main>
+      <Header title="Tickets"/>
+      <main className='main-section'>
+          {/* TING HER */}
+      </main>
     </section>
     </>
   )

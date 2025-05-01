@@ -1,0 +1,71 @@
+:root {
+    --grey-txt: #D0D0D0;
+    --teal-txt: #37AEAB;
+}
+
+.page-events {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.all-events {
+    /* border: 1px solid white; */
+    margin: 2rem 0rem 2rem 0rem;
+}
+
+
+.all-events__container {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.all-events__container-date {
+    font-family: 'Fira Sans Mixed', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 6rem;
+    height: 6rem;
+    border-radius: .3rem;
+    border: 1px solid white;
+}
+
+
+.all-events__container-div {
+}
+
+
+.all-events__container-artist {
+    font-family: 'Fira Sans', sans-serif;
+    color: white;
+    text-shadow: 1.5px 1.5px 0px var(--heading-clr);
+}
+
+
+.all-events__container-place {
+    font-family: 'Fira Sans Italic';
+    color: white;
+}
+
+
+.all-events__container-time {
+    font-family: 'Fira Sans', sans-serif;
+    color: var(--grey-txt);
+}
+
+
+.all-events__container-price {
+    font-family: 'Fira Sans', sans-serif;
+    color: var(--teal-txt);
+    /* flytt prisen lengre ned - skal ikke ligge i midten */
+}

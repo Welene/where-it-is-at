@@ -1,5 +1,4 @@
 import React from 'react'
-// import Footer from '../../components/Footer/Footer'
 import concertLogo from '../../assets/concert-logo.svg';
 import concertTitle from '../../assets/concert-title.svg';
 import './homePage.css';
@@ -14,9 +13,9 @@ function HomePage() {
         <p className="main-section__quote">Ticketing made easy</p>
       </main>
     </section>
-    {/* <Footer/> */}
     </>
   )
 }
 
 export default HomePage;
+
