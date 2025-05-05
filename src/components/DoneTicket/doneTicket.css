@@ -1,24 +1,20 @@
 .ticket-section {
-    border: 1px solid white;
-    margin-top: 3rem;
-    border-radius: .3rem;
-    background-color: white;
-    min-width: 22rem;
-    min-height: 32rem;
+	border: 1px solid white;
+	margin-top: 6rem;
+	border-radius: 0.3rem;
+	background-color: white;
+	min-width: 22rem;
+	min-height: 32rem;
 }
 
 .ticket-section__what {
-
 }
 
 .ticket-section__where {
-
 }
 
 .ticket-section__when {
-
 }
 
 .ticket-section__id-number {
-    
 }
