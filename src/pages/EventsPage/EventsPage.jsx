@@ -7,6 +7,8 @@ import Lottie from 'lottie-react';
 import animationData from '../../assets/loadingAnimation.json'; 
 import Events from '../../components/Events/Events';
 
+import './eventsPage.css';
+
 
 
 function EventsPage() {
@@ -27,6 +29,7 @@ function EventsPage() {
     <section className="page page-events">
         <Header title="Events"/>
         <main className='main-section'>
+            <input type="text" className="main-section__search" />  
             {
               concerts && <Events concerts={ concerts }/>
             }
