@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../../components/Header/Header';
+// import Header from '../../components/Header/Header';
 
 import useFetch from '../../hooks/useFetch';
 
@@ -10,6 +10,8 @@ import Events from '../../components/Events/Events';
 import { useNavigate } from 'react-router-dom';
 import leftArrow from '../../assets/left.svg';
 import shoppingCart from '../../assets/cart.svg';
+
+import Title from '../../components/Title/Title';
 
 import './eventsPage.css';
 
@@ -56,22 +58,17 @@ function EventsPage() {
 
 	return (
 		<>
-			<section className="icons-section">
-				<img
-					className="return"
-					src={leftArrow}
-					alt="Navigate back arrow"
-					onClick={clickReturn}
-				/>
-				<img
-					className="cart"
-					src={shoppingCart}
-					alt="Shopping cart"
-					onClick={clickCart}
-				/>
-			</section>
 			<section className="page page-events">
-				<Header title="Events" />
+				<section className="icons-section">
+					<img
+						className="cart"
+						src={shoppingCart}
+						alt="Shopping cart"
+						onClick={clickCart}
+					/>
+				</section>
+				{/* <Header title="Events" /> */}
+				<Title title="Events" />
 				<main className="main-section">
 					<input type="text" className="main-section__search" />
 					{concerts && <Events concerts={concerts} />}

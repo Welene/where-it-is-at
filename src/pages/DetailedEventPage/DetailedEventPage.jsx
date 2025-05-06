@@ -5,6 +5,8 @@ import Counter from '../../components/Counter/Counter';
 import leftArrow from '../../assets/left.svg';
 import shoppingCart from '../../assets/cart.svg';
 import { useNavigate } from 'react-router-dom';
+// import Header from '../../components/Header/Header';
+import Title from '../../components/Title/Title';
 
 function DetailedEventPage() {
 	const { id } = useParams(); // useParams henter id-en fra URL-en
@@ -42,23 +44,23 @@ function DetailedEventPage() {
 
 	return (
 		<>
-			<section className="icons-section">
-				<img
-					className="return"
-					src={leftArrow}
-					alt="Navigate back arrow"
-					onClick={clickReturn}
-				/>
-				<img
-					className="cart"
-					src={shoppingCart}
-					alt="Shopping cart"
-					onClick={clickCart}
-				/>
-			</section>
 			<section className="page detailed-page">
+				<section className="icons-section">
+					<img
+						className="return"
+						src={leftArrow}
+						alt="Navigate back arrow"
+						onClick={clickReturn}
+					/>
+					<img
+						className="cart"
+						src={shoppingCart}
+						alt="Shopping cart"
+						onClick={clickCart}
+					/>
+				</section>
 				<section className="event-details">
-					<h1 className="event-details__title">Event</h1>
+					<Title title="Event" />
 					<p className="event-details__happening">
 						You are about to score some tickets to
 					</p>
