@@ -2,6 +2,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar } from 'swiper/modules';
 
+import { useNavigate, useLocation } from 'react-router-dom';
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
