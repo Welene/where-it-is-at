@@ -1,0 +1,10 @@
+.cart-btn {
+	background-color: #37aeab;
+	border-style: none;
+	color: white;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 1.2rem;
+	padding: 1rem 2.5rem;
+	border-radius: 0.2rem;
+	margin-top: 2rem;
+}

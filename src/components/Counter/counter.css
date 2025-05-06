@@ -1,0 +1,49 @@
+.tickets-section {
+	display: grid;
+	grid-template-areas:
+		'top top top'
+		'left middle right';
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-top: 2rem;
+	align-items: center;
+	justify-items: center;
+	border: 2px solid var(--heading-clr);
+	border-radius: 0.2rem;
+	margin-top: 5rem;
+}
+
+.tickets-section__total-price {
+	grid-area: top;
+	font-weight: bold;
+	border-bottom: 1px solid var(--heading-clr);
+	width: 100%;
+	padding: 1.5rem 1rem;
+	font-size: 2rem;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.tickets-section__remove {
+	grid-area: left;
+	padding: 0.5rem 1.8rem;
+	border-style: none;
+	background: none;
+	font-size: 3rem;
+	border-right: 1px solid var(--heading-clr);
+	color: white;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.tickets-section__amount-tickets {
+	grid-area: middle;
+}
+
+.tickets-section__add {
+	grid-area: right;
+	padding: 0.5rem 1.8rem;
+	border-style: none;
+	background: none;
+	font-size: 3rem;
+	border-left: 1px solid var(--heading-clr);
+	color: white;
+	font-family: 'Fira Sans', sans-serif;
+}

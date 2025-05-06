@@ -1,78 +1,68 @@
 @font-face {
-  font-family: 'Sansita One';
-  src: url('./assets/fonts/SansitaOne.woff') format('truetype');
+	font-family: 'Sansita One';
+	src: url('./assets/fonts/SansitaOne.woff') format('truetype');
 }
 
 @font-face {
-  font-family: 'Fira Sans';
-  src: url('./assets/fonts/FiraSans-Bold.ttf') format('truetype');
+	font-family: 'Fira Sans';
+	src: url('./assets/fonts/FiraSans-Bold.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Fira Sans Italic';
-  src: url('./assets/fonts/FiraSans-Italic.ttf') format('truetype');
+	font-family: 'Fira Sans Italic';
+	src: url('./assets/fonts/FiraSans-Italic.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Fira Sans Mixed';
-  src: url('./assets/fonts/FiraSans-Medium.ttf') format('truetype');
+	font-family: 'Fira Sans Mixed';
+	src: url('./assets/fonts/FiraSans-Medium.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'Fira Sans X-Light';
-  src: url('./assets/fonts/FiraSans-ExtraLight.ttf') format('truetype');
+	font-family: 'Fira Sans X-Light';
+	src: url('./assets/fonts/FiraSans-ExtraLight.ttf') format('truetype');
 }
 
 :root {
-  --primary-bg: #231F42;
-  --secondary-bg: #F56B9A;
-  --heading-clr: #F56B9A;
+	--primary-bg: #231f42;
+	--secondary-bg: #f56b9a;
+	--heading-clr: #f56b9a;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
-/* body {
-  font-family: 'Sansita One', sans-serif;
-} */
-
 .app {
-    background-color: var(--primary-bg);
-    max-width: 500px;
-    width: 100%;
-    min-height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-
-/* .app {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
+	background-color: var(--primary-bg);
+	max-width: 500px;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+}
 
 .page {
-  background-color: var(--primary-bg);
-  max-width: 500px;
-  width: 100%;
-  min-height: 100vh;
-  margin: 0 auto;
+	background-color: var(--primary-bg);
+	max-width: 500px;
+	width: 100%;
+	height: 100%;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .main-section {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
 }
 
 .main-section__quote {
-  color: white;
-  font-weight: 800;
-  text-align: center;
-  font-size: 1.5rem;
+	color: white;
+	font-weight: 800;
+	text-align: center;
+	font-size: 1.5rem;
 }

@@ -1,24 +1,53 @@
 .ticket-section {
-    border: 1px solid white;
-    margin-top: 3rem;
-    border-radius: .3rem;
-    background-color: white;
-    min-width: 22rem;
-    min-height: 32rem;
+	border: 1px solid white;
+	margin-top: 6rem;
+	border-radius: 0.3rem;
+	background-color: white;
+	min-width: 22rem;
+	min-height: 32rem;
+	display: flex;
+	flex-direction: column;
 }
 
 .ticket-section__what {
-
+	background-color: yellow;
+	padding: 1rem;
 }
 
 .ticket-section__where {
+	background-color: green;
+	padding: 1rem;
+}
 
+.ticket-section__container {
+	display: flex;
+	flex-direction: row;
 }
 
 .ticket-section__when {
+	background-color: purple;
+	padding: 1rem;
+	flex-grow: 1;
+}
 
+.ticket-section__from {
+	background-color: grey;
+	padding: 1rem;
+	flex-grow: 1;
+}
+
+.ticket-section__to {
+	background-color: red;
+	padding: 1rem;
+	flex-grow: 1;
+}
+
+.ticket-section__info {
+	background-color: pink;
+	padding: 1rem;
 }
 
 .ticket-section__id-number {
-    
+	background-color: blue;
+	padding: 1rem;
 }
