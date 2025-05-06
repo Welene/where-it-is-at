@@ -3,7 +3,7 @@ import useFetch from '../../hooks/useFetch';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
-import Cart from '../CartButton/Button';
+import AddToCart from '../AddToCartBtn/Button';
 
 function Counter() {
 	const [count, setCount] = useState(0);
@@ -38,7 +38,7 @@ function Counter() {
 					+
 				</button>
 			</section>
-			<Cart
+			<AddToCart
 				count={count}
 				eventId={id}
 				price={price}

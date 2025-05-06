@@ -3,6 +3,7 @@ import useFetch from '../../hooks/useFetch';
 import './detailedEventPage.css';
 import Counter from '../../components/Counter/Counter';
 import leftArrow from '../../assets/left.svg';
+import shoppingCart from '../../assets/cart.svg';
 import { useNavigate } from 'react-router-dom';
 
 function DetailedEventPage() {
@@ -35,15 +36,27 @@ function DetailedEventPage() {
 		navigate('/'); // function that navigates back to HomePage
 	};
 
+	const clickCart = () => {
+		navigate('/cart'); // function that navigates back to HomePage
+	};
+
 	return (
 		<>
-			<section className="page detailed-page">
+			<section className="icons-section">
 				<img
-					className="detailed-page__return"
+					className="return"
 					src={leftArrow}
 					alt="Navigate back arrow"
 					onClick={clickReturn}
 				/>
+				<img
+					className="cart"
+					src={shoppingCart}
+					alt="Shopping cart"
+					onClick={clickCart}
+				/>
+			</section>
+			<section className="page detailed-page">
 				<section className="event-details">
 					<h1 className="event-details__title">Event</h1>
 					<p className="event-details__happening">

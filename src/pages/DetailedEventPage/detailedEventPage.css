@@ -40,8 +40,20 @@
 	color: #37aeab;
 }
 
-.detailed-page__return {
-	width: 25px;
+.icons-section {
+	width: 100%;
 	height: auto;
 	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 1rem;
+	background-color: var(--primary-bg);
+}
+
+.cart {
+	width: 35px;
+}
+
+.return {
+	width: 25px;
 }

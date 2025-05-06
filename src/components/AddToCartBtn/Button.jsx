@@ -1,7 +1,7 @@
 import React from 'react';
 import './button.css';
 
-function Cart({ count, eventId, price, where, when, name }) {
+function Cart({ count, eventId, price, where, when, name, children }) {
 	const handleClick = () => {
 		const oldCart = JSON.parse(localStorage.getItem('cart')) || [];
 		const newCartItem = {
@@ -18,7 +18,7 @@ function Cart({ count, eventId, price, where, when, name }) {
 
 	return (
 		<button className="cart-btn" onClick={handleClick} disabled={count < 1}>
-			Lägg i varukorgen
+			{children || 'Lägg i varukorgen'}
 		</button>
 	);
 }
