@@ -61,7 +61,7 @@ function EventsPage() {
 			<section className="page page-events">
 				<section className="icons-section">
 					<img
-						className="cart"
+						className="cart cart--right"
 						src={shoppingCart}
 						alt="Shopping cart"
 						onClick={clickCart}

@@ -1,0 +1,58 @@
+.order-section {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+	/* text-align: center; */
+	height: 100vh;
+	max-width: 500px;
+}
+
+.order-section__container {
+	/* padding: 3rem 10rem; */
+	border: 2px solid var(--heading-clr);
+	border-radius: 0.2rem;
+	max-width: 25rem;
+	margin-top: 2rem;
+}
+
+.order-section__name {
+	color: var(--heading-clr);
+	font-family: 'Sansita One', sans-serif;
+	padding: 0rem 1rem;
+}
+
+.order-section__when {
+	color: #37aeab;
+	padding: 0rem 0rem 1rem 1rem;
+}
+
+.order-section__counter {
+	border-top: 1px solid var(--heading-clr);
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	text-align: center;
+}
+
+.order-section__counter-btn {
+	background: none;
+	border-style: none;
+	color: white;
+	padding: 0rem 1rem;
+	font-size: 2rem;
+}
+
+.order-section__counter-btn--remove {
+	border-right: 1px solid var(--heading-clr);
+}
+
+.order-section__counter-btn--add {
+	border-left: 1px solid var(--heading-clr);
+}
+
+.order-section__counter-amount {
+	color: white;
+}
