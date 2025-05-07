@@ -2,9 +2,11 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 1.5rem;
-	height: 100%;
-	width: 100%;
-	/* background-image: linear-gradient(to bottom right, #231f42, #f56b9a); */
+	height: 100vh;
+	max-width: 500px;
 	background-image: linear-gradient(#231f42, #f56b9a);
+}
+
+.page-confirmation > .icons-section {
+	background: none;
 }

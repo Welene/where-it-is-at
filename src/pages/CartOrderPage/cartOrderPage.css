@@ -26,6 +26,7 @@
 .order-section__when {
 	color: #37aeab;
 	padding: 0rem 0rem 1rem 1rem;
+	font-family: 'Fira Sans', sans-serif;
 }
 
 .order-section__counter {
@@ -55,4 +56,13 @@
 
 .order-section__counter-amount {
 	color: white;
+}
+
+.order-section__empty-msg {
+	font-family: 'Fira Sans', sans-serif;
+	margin-top: 3rem;
+	font-size: 1.2rem;
+	text-align: center;
+	letter-spacing: 0.1rem;
+	line-height: 1.5;
 }
