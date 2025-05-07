@@ -4,50 +4,108 @@
 	border-radius: 0.3rem;
 	background-color: white;
 	min-width: 22rem;
-	min-height: 32rem;
+	margin: 3rem;
 	display: flex;
 	flex-direction: column;
 }
+.ticket-section__what-heading,
+.ticket-section__where-heading,
+.ticket-section__when-heading,
+.ticket-section__from-heading,
+.ticket-section__to-heading {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 1rem;
+	opacity: 0.5;
+}
 
 .ticket-section__what {
-	background-color: yellow;
 	padding: 1rem;
+	border-bottom: 1px dashed grey;
+	background-color: rgb(252, 252, 252);
+}
+
+.ticket-section__what-title {
+	font-family: 'Sansita One';
+	font-size: 2rem;
+	color: var(--heading-clr);
 }
 
 .ticket-section__where {
-	background-color: green;
 	padding: 1rem;
+	border-bottom: 1px dashed grey;
+	background-color: rgb(245, 245, 245);
+}
+
+.ticket-section__where-title {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 1.5rem;
+	opacity: 0.7;
 }
 
 .ticket-section__container {
 	display: flex;
 	flex-direction: row;
+	border-bottom: 1px dashed grey;
 }
 
 .ticket-section__when {
-	background-color: purple;
 	padding: 1rem;
 	flex-grow: 1;
+	background-color: rgb(245, 245, 245);
+}
+
+.ticket-section__when-title {
+	flex-grow: 1;
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 1rem;
+	opacity: 0.7;
 }
 
 .ticket-section__from {
-	background-color: grey;
 	padding: 1rem;
 	flex-grow: 1;
+	border-left: 1px dashed grey;
+	background-color: rgb(245, 245, 245);
+}
+
+.ticket-section__from-title {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 1rem;
+	opacity: 0.7;
 }
 
 .ticket-section__to {
-	background-color: red;
 	padding: 1rem;
 	flex-grow: 1;
+	border-left: 1px dashed grey;
+	background-color: rgb(245, 245, 245);
+}
+
+.ticket-section__to-title {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 1rem;
+	opacity: 0.7;
 }
 
 .ticket-section__info {
-	background-color: pink;
 	padding: 1rem;
+	background-color: rgb(245, 245, 245);
+	font-family: Fira Sans X-Light;
+	font-weight: 600;
+	color: grey;
 }
 
 .ticket-section__id-number {
-	background-color: blue;
 	padding: 1rem;
+	font-family: Fira Sans X-Light;
+	font-weight: 600;
+	color: grey;
+	background-color: rgb(236, 236, 236);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.ticket-section__id-txt {
+	margin-top: 1rem;
 }

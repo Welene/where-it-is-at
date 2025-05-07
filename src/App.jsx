@@ -11,6 +11,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import DetailedEventPage from './pages/DetailedEventPage/DetailedEventPage';
 import CartOrderPage from './pages/CartOrderPage/CartOrderPage';
+import ConfirmationPage from './pages/ConfirmationPage/ConfirmationPage';
 // import FetchAPI from './api/FetchConcerts';
 
 // function App() {
@@ -57,6 +58,14 @@ const router = createBrowserRouter([
 		element: (
 			<>
 				<CartOrderPage />
+			</>
+		),
+	},
+	{
+		path: '/confirmation',
+		element: (
+			<>
+				<ConfirmationPage />
 			</>
 		),
 	},
