@@ -9,6 +9,12 @@
 	max-width: 500px;
 }
 
+.event-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .event-details__title {
 	margin-bottom: 1rem;
 }
@@ -25,6 +31,7 @@
 	max-width: 14rem;
 	font-size: 1.2rem;
 	opacity: 0.8;
+	margin-top: 1rem;
 }
 
 .event-details__location {

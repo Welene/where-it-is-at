@@ -5,27 +5,31 @@
 	/* justify-content: center; */
 	align-items: center;
 	/* text-align: center; */
-	height: 100vh;
+	/* height: 100%; */
+	/* height: 100%; */
 	max-width: 500px;
 }
 
 .order-section__container {
-	/* padding: 3rem 10rem; */
 	border: 2px solid var(--heading-clr);
 	border-radius: 0.2rem;
+	display: flex;
+	flex-direction: column;
+	/* align-items: center; */
+	width: 18rem;
 	max-width: 25rem;
-	margin-top: 2rem;
+	margin-top: 3rem;
 }
 
 .order-section__name {
 	color: var(--heading-clr);
 	font-family: 'Sansita One', sans-serif;
-	padding: 0rem 1rem;
+	padding: 1rem 1rem;
 }
 
 .order-section__when {
 	color: #37aeab;
-	padding: 0rem 0rem 1rem 1rem;
+	padding: 0rem 1rem 1rem 1rem;
 	font-family: 'Fira Sans', sans-serif;
 }
 
@@ -43,19 +47,23 @@
 	border-style: none;
 	color: white;
 	padding: 0rem 1rem;
-	font-size: 2rem;
+	font-size: 1.5rem;
 }
 
 .order-section__counter-btn--remove {
 	border-right: 1px solid var(--heading-clr);
+	font-size: 2rem;
 }
 
 .order-section__counter-btn--add {
 	border-left: 1px solid var(--heading-clr);
+	height: 100%;
 }
 
 .order-section__counter-amount {
 	color: white;
+	font-weight: 900;
+	letter-spacing: 0.2rem;
 }
 
 .order-section__empty-msg {

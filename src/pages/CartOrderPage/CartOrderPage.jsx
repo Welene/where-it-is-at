@@ -93,7 +93,7 @@ function CartOrderPage() {
 			) : (
 				<p className="order-section__empty-msg">
 					Your cart is looking lonely...
-					<br /> Why not add some artists to it? :-)
+					<br /> Why not add some artists to it? :)
 				</p>
 			)}
 		</section>
