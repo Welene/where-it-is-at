@@ -5,38 +5,73 @@ import shoppingCart from '../../assets/cart.svg';
 import AddToCart from '../../components/AddToCartBtn/Button';
 import './cartOrderPage.css';
 import Title from '../../components/Title/Title';
+import { v4 as uuidv4 } from 'uuid';
 
 function CartOrderPage() {
-	const [cartItems, setCartItems] = useState([]); // Endret til array
+	const [cartItems, setCartItems] = useState([]);
+	const [seatNumbers, setSeatNumbers] = useState([]);
 	const navigate = useNavigate();
+
+	// Helper to generate short readable ID
+	const generateShortId = () => {
+		const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+		let result = '';
+		for (let i = 0; i < 5; i++) {
+			result += chars.charAt(Math.floor(Math.random() * chars.length));
+		}
+		return result;
+	};
+
+	// Helper to get a random section A–H
+	const getRandomSection = () => {
+		const sections = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
+		return sections[Math.floor(Math.random() * sections.length)];
+	};
 
 	useEffect(() => {
 		const cart = JSON.parse(localStorage.getItem('cart')) || [];
-		setCartItems(cart); // lagre hele arrayen
+		setCartItems(cart);
+
+		const updatedItems = cart.map((item) => {
+			const baseUuid = uuidv4(); // Internal unique ID
+			const shortId = generateShortId(); // Displayed receipt ID
+			const section = getRandomSection(); // Shared section
+			const startingSeat = Math.floor(Math.random() * 90) + 1;
+
+			// Create a ticket for each seat
+			const tickets = Array.from({ length: item.tickets }, (_, i) => ({
+				...item,
+				seatNumber: startingSeat + i,
+				section,
+				uniqueId: baseUuid, // Internal use
+				displayId: shortId, // For showing
+			}));
+
+			return tickets;
+		});
+
+		setSeatNumbers(updatedItems.flat());
 	}, []);
 
 	const clickReturn = () => navigate('/');
 	const clickCart = () => navigate('/cart');
 
-	const confirmOrder = () => {
-		localStorage.setItem('confirmedTickets', JSON.stringify(cartItems));
-		localStorage.removeItem('cart');
-		navigate('/confirmation');
-	};
-
 	const updateTicketCount = (index, delta) => {
 		const updatedItems = [...cartItems];
 		updatedItems[index].tickets += delta;
-
-		// Ikke tillat negative verdier
 		if (updatedItems[index].tickets < 0) return;
 
-		// Oppdater totalpris
 		updatedItems[index].totalPrice =
 			updatedItems[index].tickets * updatedItems[index].price;
 
 		setCartItems(updatedItems);
 		localStorage.setItem('cart', JSON.stringify(updatedItems));
+	};
+
+	const confirmOrder = () => {
+		localStorage.setItem('confirmedTickets', JSON.stringify(seatNumbers));
+		localStorage.removeItem('cart');
+		navigate('/confirmation');
 	};
 
 	return (
@@ -66,9 +101,10 @@ function CartOrderPage() {
 							className="order-section__container">
 							<h2 className="order-section__name">{item.name}</h2>
 							<p className="order-section__when">
-								{item.when?.date} kl {item.when?.from} -{' '}
+								{item.when?.date} kl {item.when?.from} - {''}
 								{item.when?.to}
 							</p>
+
 							<div className="order-section__counter">
 								<button
 									className="order-section__counter-btn order-section__counter-btn--remove"

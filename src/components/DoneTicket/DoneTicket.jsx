@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './doneTicket.css';
-import { useState, useEffect } from 'react';
 import barCode from '../../assets/bar.svg';
 
 function DoneTicket() {
@@ -59,19 +58,21 @@ function DoneTicket() {
 						</article>
 
 						<article className="ticket-section__info">
+							<p className="ticket-section__info-heading">INFO</p>
 							<p className="ticket-section__info-txt">
-								INFO HER MED SETER -UUID?
+								Section: {ticket.section} | Seat:{' '}
+								{ticket.seatNumber}
 							</p>
 						</article>
 
 						<article className="ticket-section__id-number">
 							<img
 								src={barCode}
-								alt="Picture of a unique barcode"
+								alt="Barcode"
 								className="ticket-section__id-bar"
 							/>
 							<p className="ticket-section__id-txt">
-								HER SKAL RANDOM #ID NUMMER VÆRE -- UUID?
+								#{ticket.displayId}
 							</p>
 						</article>
 					</section>
