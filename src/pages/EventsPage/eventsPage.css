@@ -1,14 +1,10 @@
-.page-events {
-	padding-top: 4rem;
-}
-
-.main-section__search {
-	width: 25rem;
+.search__container {
+	width: 26rem;
 	align-self: center;
-	margin-top: 2rem;
+	margin: 2rem 0rem 2rem 0rem;
 	font-size: 1.2rem;
 	font-family: 'Fira Sans Italic';
-	padding: 0.5rem;
+	padding: 0.8rem;
 	border-radius: 0.3rem;
 	border-style: none;
 	background-color: rgba(255, 255, 255, 0.1);
@@ -18,5 +14,9 @@
 .cart--right {
 	width: 35px;
 	margin-left: auto;
-	margin-top: 2rem;
+}
+
+.invisible-label {
+	position: absolute;
+	clip: rect(0 0 0 0);
 }

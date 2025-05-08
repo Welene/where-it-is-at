@@ -4,15 +4,12 @@ import React from 'react';
 // import animationData from './assets/loadingAnimation.json';
 // LOADING ANIMASJON TIL SENERE
 
-// import HomePage from './pages/HomePage/HomePage';
 import './index.css';
 import SwipeNav from './components/SwipeNavigation/SwipeNavigation';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
 import DetailedEventPage from './pages/DetailedEventPage/DetailedEventPage';
 import CartOrderPage from './pages/CartOrderPage/CartOrderPage';
 import ConfirmationPage from './pages/ConfirmationPage/ConfirmationPage';
-// import FetchAPI from './api/FetchConcerts';
 
 // function App() {
 

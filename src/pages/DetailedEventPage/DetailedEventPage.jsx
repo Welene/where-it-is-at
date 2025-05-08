@@ -5,7 +5,6 @@ import Counter from '../../components/Counter/Counter';
 import leftArrow from '../../assets/left.svg';
 import shoppingCart from '../../assets/cart.svg';
 import { useNavigate } from 'react-router-dom';
-// import Header from '../../components/Header/Header';
 import Title from '../../components/Title/Title';
 
 function DetailedEventPage() {
@@ -44,38 +43,38 @@ function DetailedEventPage() {
 
 	return (
 		<>
-			<section className="page detailed-page">
-				<section className="icons-section">
-					<img
-						className="return"
-						src={leftArrow}
-						alt="Navigate back arrow"
-						onClick={clickReturn}
-					/>
-					<img
-						className="cart"
-						src={shoppingCart}
-						alt="Shopping cart"
-						onClick={clickCart}
-					/>
+			<main className="main-section">
+				<section className="page detailed-page">
+					<section className="icons-section">
+						<img
+							className="return"
+							src={leftArrow}
+							alt="Navigate back arrow"
+							onClick={clickReturn}
+						/>
+						<img
+							className="cart"
+							src={shoppingCart}
+							alt="Shopping cart"
+							onClick={clickCart}
+						/>
+					</section>
+					<section className="event-details">
+						<Title title="Event" />
+						<p className="event-details__happening">
+							You are about to score some tickets to
+						</p>
+
+						<h2 className="event-details__artist">{name}</h2>
+						<p className="event-details__time">
+							{when.date} kl {when.from} - {when.to}
+						</p>
+						<p className="event-details__location">@ {where}</p>
+					</section>
+
+					<Counter where={where} when={when} name={name} />
 				</section>
-				<section className="event-details">
-					<Title title="Event" />
-					<p className="event-details__happening">
-						You are about to score some tickets to
-					</p>
-
-					<h2 className="event-details__artist">{name}</h2>
-					<p className="event-details__time">
-						{when.date} kl {when.from} - {when.to}
-					</p>
-					<p className="event-details__location">@ {where}</p>
-				</section>
-
-				<Counter where={where} when={when} name={name} />
-			</section>
-
-			{/* "anrop" varukorg knapp komponent her nede */}
+			</main>
 		</>
 	);
 }
