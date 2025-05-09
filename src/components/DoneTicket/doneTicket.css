@@ -5,8 +5,9 @@
 	background-color: white;
 	display: flex;
 	flex-direction: column;
-	width: 22rem;
-	/* background: #fff; */
+	width: 90%;
+	min-width: clamp(20rem, 50%, 24rem);
+	/* CLAMP IS A LIFE SAVER AND EVERYONE SHOULD LOVE CLAMPS <3 */
 }
 .ticket-section__what-heading,
 .ticket-section__where-heading,
@@ -122,7 +123,12 @@
 .scroll-container {
 	max-height: 80vh;
 	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	padding: 1rem;
+	width: 100%;
+	min-width: clamp(20rem, 50%, 25rem);
 }
 
 .scroll-container--events {

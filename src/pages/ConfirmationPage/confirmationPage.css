@@ -9,4 +9,5 @@
 
 .page-confirmation > .icons-section {
 	background: none;
+	z-index: 10;
 }

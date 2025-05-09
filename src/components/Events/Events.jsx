@@ -2,6 +2,7 @@ import React from 'react';
 import './events.css';
 import { useNavigate } from 'react-router-dom';
 
+// Events component on the EventsPage -- sends in the needed data props
 function Events({ concerts }) {
 	const navigate = useNavigate();
 	return (
@@ -32,7 +33,6 @@ function Events({ concerts }) {
 							<p className="all-events__container-time">
 								{concert.when.from} – {concert.when.to}
 							</p>
-							{/* KANSKJE HA DISSE I EN EGEN FLEX CONTAINER? SÅ ALT BLIR PÅ LIK LINJE*/}
 						</div>
 
 						<div className="all-events__container-div">

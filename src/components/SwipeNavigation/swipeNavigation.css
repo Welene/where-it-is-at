@@ -2,11 +2,14 @@
 .swiper-wrapper {
 	height: 100%;
 	max-width: 500px;
+	width: 100%;
+	min-width: clamp(20rem, 50%, 24rem);
 }
 
 .swiper-slide {
 	height: 100%;
-	max-width: 500px;
+	/* max-width: 500px; */
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 }
@@ -18,11 +21,15 @@
 	flex-direction: row;
 	justify-self: center;
 	background-color: var(--primary-bg);
+	width: 100%;
+	min-width: clamp(20rem, 50%, 24rem);
 }
 
 .swipe-section__navigation {
 	width: 100%;
 	height: 100%;
+	width: 100%;
+	min-width: clamp(20rem, 50%, 24rem);
 }
 
 .swiper-pagination {

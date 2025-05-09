@@ -6,73 +6,70 @@ import AddToCart from '../../components/AddToCartBtn/Button';
 import './cartOrderPage.css';
 import Title from '../../components/Title/Title';
 import { v4 as uuidv4 } from 'uuid';
+import useCounterStore from '../../store/counterStore';
 
+// function for editing amount of tickets -- adding ticket #ID, seats & sections + confirming the order, nav to confirmationPage & eremoving all events from your cart
 function CartOrderPage() {
-	const [cartItems, setCartItems] = useState([]);
-	const [seatNumbers, setSeatNumbers] = useState([]);
 	const navigate = useNavigate();
+	const { cartItems, updateTicketCount, setCartItems } = useCounterStore();
+	const [seatNumbers, setSeatNumbers] = useState([]);
 
-	// Helper to generate short readable ID
+	// function that gives random ticket ID
 	const generateShortId = () => {
 		const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-		let result = '';
-		for (let i = 0; i < 5; i++) {
-			result += chars.charAt(Math.floor(Math.random() * chars.length));
-		}
-		return result;
+		return Array.from({ length: 5 }, () =>
+			chars.charAt(Math.floor(Math.random() * chars.length))
+		).join('');
 	};
 
-	// Helper to get a random section A–H
+	// function that gives random sitting section between A-H
 	const getRandomSection = () => {
 		const sections = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
 		return sections[Math.floor(Math.random() * sections.length)];
 	};
 
+	// when you load the page -- the localStorage cart is sent into the global state/store
 	useEffect(() => {
-		const cart = JSON.parse(localStorage.getItem('cart')) || [];
-		setCartItems(cart);
+		const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
+		setCartItems(storedCart);
+	}, [setCartItems]);
 
-		const updatedItems = cart.map((item) => {
-			const baseUuid = uuidv4(); // Internal unique ID
-			const shortId = generateShortId(); // Displayed receipt ID
-			const section = getRandomSection(); // Shared section
-			const startingSeat = Math.floor(Math.random() * 90) + 1;
+	// when cartItems change in the global state, it gived you a random seat-number with UUID
+	// it also uses the shortId and RandomSection function to give you a random sitting section & a ticket #ID
+	useEffect(() => {
+		const updatedSeats = cartItems.flatMap((item) => {
+			const baseUuid = uuidv4();
+			const shortId = generateShortId();
+			const section = getRandomSection();
+			const startSeat = Math.floor(Math.random() * 90) + 1;
 
-			// Create a ticket for each seat
-			const tickets = Array.from({ length: item.tickets }, (_, i) => ({
+			return Array.from({ length: item.tickets }, (_, i) => ({
 				...item,
-				seatNumber: startingSeat + i,
+				seatNumber: startSeat + i,
 				section,
-				uniqueId: baseUuid, // Internal use
-				displayId: shortId, // For showing
+				uniqueId: baseUuid,
+				displayId: shortId,
 			}));
-
-			return tickets;
 		});
 
-		setSeatNumbers(updatedItems.flat());
-	}, []);
+		setSeatNumbers(updatedSeats);
+	}, [cartItems]);
 
 	const clickReturn = () => navigate('/');
 	const clickCart = () => navigate('/cart');
 
-	const updateTicketCount = (index, delta) => {
-		const updatedItems = [...cartItems];
-		updatedItems[index].tickets += delta;
-		if (updatedItems[index].tickets < 0) return;
-
-		updatedItems[index].totalPrice =
-			updatedItems[index].tickets * updatedItems[index].price;
-
-		setCartItems(updatedItems);
-		localStorage.setItem('cart', JSON.stringify(updatedItems));
-	};
-
+	// clicking confirm order stores confirmedTickets and removes the old cart from the varukorg page -- navigates to /confirmation page (where you see all your tickets, seats, sections etc)
 	const confirmOrder = () => {
 		localStorage.setItem('confirmedTickets', JSON.stringify(seatNumbers));
 		localStorage.removeItem('cart');
 		navigate('/confirmation');
 	};
+
+	// calculates and sows total price of ALL the added events in CartPage
+	const totalPrice = cartItems.reduce(
+		(sum, item) => sum + item.totalPrice,
+		0
+	);
 
 	return (
 		<section className="page order-section">
@@ -80,13 +77,13 @@ function CartOrderPage() {
 				<img
 					className="return"
 					src={leftArrow}
-					alt="Navigate back arrow"
+					alt="Back"
 					onClick={clickReturn}
 				/>
 				<img
 					className="cart"
 					src={shoppingCart}
-					alt="Shopping cart"
+					alt="Cart"
 					onClick={clickCart}
 				/>
 			</section>
@@ -101,19 +98,22 @@ function CartOrderPage() {
 							className="order-section__container">
 							<h2 className="order-section__name">{item.name}</h2>
 							<p className="order-section__when">
-								{item.when?.date} kl {item.when?.from} - {''}
+								{item.when?.date} kl {item.when?.from} -{' '}
 								{item.when?.to}
 							</p>
 
+							{/* buttons for adding and removing tickets */}
 							<div className="order-section__counter">
 								<button
 									className="order-section__counter-btn order-section__counter-btn--remove"
 									onClick={() => updateTicketCount(index, -1)}
 									disabled={item.tickets < 1}>
+									{/* you can't click on the button if you have 0 tickets */}
 									-
 								</button>
 								<p className="order-section__counter-amount">
 									{item.tickets}
+									{/* displays the amount of tickets you first chose on the DetailedEventPage */}
 								</p>
 								<button
 									className="order-section__counter-btn order-section__counter-btn--add"
@@ -124,9 +124,13 @@ function CartOrderPage() {
 						</article>
 					))}
 
+					<p className="order-section__total">GIMMI UR MONNI NÆOW:</p>
+					<p className="order-section__pay">{totalPrice} SEK</p>
+
 					<AddToCart onClick={confirmOrder}>Confirm order</AddToCart>
 				</>
 			) : (
+				// message for the user if your cart has to events in it
 				<p className="order-section__empty-msg">
 					Your cart is looking lonely...
 					<br /> Why not add some artists to it? :)

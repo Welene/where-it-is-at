@@ -34,11 +34,11 @@ function DetailedEventPage() {
 	// samme variabel så alt blir på en linje, så vi kan bruke disse nedenfor:
 
 	const clickReturn = () => {
-		navigate('/'); // function that navigates back to HomePage
+		navigate('/');
 	};
 
 	const clickCart = () => {
-		navigate('/cart'); // function that navigates back to HomePage
+		navigate('/cart');
 	};
 
 	return (
