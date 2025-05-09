@@ -1,0 +1,104 @@
+:root {
+	--grey-txt: #d0d0d0;
+	--teal-txt: #37aeab;
+}
+
+.page-events {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.page-events > h1 {
+	position: relative;
+	top: 1rem;
+}
+
+.page-events > .icons-section {
+	position: relative;
+	top: -1.5rem;
+}
+
+.all-events {
+	margin: 0rem 0rem 5rem 1rem;
+	margin-bottom: 5rem;
+	width: 100%;
+	min-width: clamp(16rem, 50%, 30rem);
+}
+
+.all-events__container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: clamp(1rem, 2vw, 1rem);
+	padding: 1rem;
+	width: 100%;
+	min-width: clamp(16rem, 50%, 30rem);
+}
+
+.all-events__container-date {
+	font-family: 'Fira Sans Mixed', sans-serif;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 6rem;
+	height: 6rem;
+	border-radius: 0.3rem;
+	border: 1px solid white;
+	margin-right: 1.5rem;
+}
+
+/* date, name, arena, time, price containers */
+.all-events__container-div {
+	width: 100%;
+	min-width: clamp(6rem, 10vw, 10rem);
+}
+
+.all-events__container-div:nth-last-child(3) {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+.all-events__container-div:nth-last-child(2) {
+	font-size: clamp(0.8rem, 3vw, 2rem);
+}
+
+.all-events__container-div:nth-last-child(1) {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	max-width: 1rem;
+}
+
+.all-events__container-artist {
+	font-family: 'Fira Sans', sans-serif;
+	color: white;
+	text-shadow: 1.5px 1.5px 0px var(--heading-clr);
+}
+
+.all-events__container-place {
+	font-family: 'Fira Sans Italic';
+	color: white;
+}
+
+.all-events__container-time {
+	font-family: 'Fira Sans', sans-serif;
+	color: var(--grey-txt);
+}
+
+.all-events__container-price {
+	font-family: 'Fira Sans', sans-serif;
+	color: var(--teal-txt);
+	position: relative;
+	bottom: -1.6rem;
+}
+
+.scroll-container--events {
+	width: 90%;
+	min-width: clamp(20rem, 50%, 20rem);
+}

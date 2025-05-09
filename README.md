@@ -1,12 +1,13 @@
-# React + Vite
+# Helenes React Exam
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Say hello to my last brain cells that will be responsible of delivering this exam!
 
-Currently, two official plugins are available:
+### Bibliotek som jag har användt:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   Swiper: Gör det lätt att skapa sektioner där man kan swipa till nästa sida, ser väldigt fint och smidigt ut, men var lite förvirrande i början när man blandade detta med routing. Passar bra till min app eftersom jag bygger en mobil-app, och då är swiping till andra sidor perfekt!
 
-## Expanding the ESLint configuration
+-   UUID: Användes för att skapa random seats när man bokar flera biljetter på samma event, bra att använda då den här appen skapar upp flera random genererade saker, men i det här fallet har jag bara använt den till seats.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+-   react-confetti: Gör livet bättre på alla sätt (inklusive appen), denna ligger bara på HomePage img i min app, tryck lite på den och allt blir plötsligt lite roligare! Den ser fin ut, animationerna ser mer "wow" ut, animationer kan få användaren att interagera med sidan mer och också bli mer intresserad.
+
+-   Framer Motion: Ett bibliotek för att lätt lägga till en liten animation på knapparna (add to cart & confirm order), som ger en liten indikation på att "oj, nu hände det något" – ja, du la till något i varukorgen! När knapparna inte hade någon animation var det väldigt lätt att tänka "hände det något nu?", men när den fick animation så ser man att funktionen "gick igenom" och att det funkade.

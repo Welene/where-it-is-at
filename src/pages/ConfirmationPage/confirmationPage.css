@@ -1,0 +1,13 @@
+.page-confirmation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* height: 100%; */
+	max-width: 500px;
+	background-image: linear-gradient(#231f42, #f56b9a);
+}
+
+.page-confirmation > .icons-section {
+	background: none;
+	z-index: 10;
+}

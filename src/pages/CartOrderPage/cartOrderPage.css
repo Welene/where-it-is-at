@@ -1,0 +1,87 @@
+.order-section {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+	/* text-align: center; */
+	/* height: 100%; */
+	/* height: 100%; */
+	max-width: 500px;
+}
+
+.order-section__container {
+	border: 2px solid var(--heading-clr);
+	border-radius: 0.2rem;
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	min-width: clamp(18rem, 50%, 22rem);
+	margin-top: 3rem;
+}
+
+.order-section__name {
+	color: var(--heading-clr);
+	font-family: 'Sansita One', sans-serif;
+	padding: 1rem 1rem;
+}
+
+.order-section__when {
+	color: #37aeab;
+	padding: 0rem 1rem 1rem 1rem;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+.order-section__counter {
+	border-top: 1px solid var(--heading-clr);
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	text-align: center;
+}
+
+.order-section__counter-btn {
+	background: none;
+	border-style: none;
+	color: white;
+	padding: 0rem 1rem;
+	font-size: 1.5rem;
+}
+
+.order-section__counter-btn--remove {
+	border-right: 1px solid var(--heading-clr);
+	font-size: 2rem;
+}
+
+.order-section__counter-btn--add {
+	border-left: 1px solid var(--heading-clr);
+	height: 100%;
+}
+
+.order-section__counter-amount {
+	color: white;
+	font-weight: 900;
+	letter-spacing: 0.2rem;
+}
+
+.order-section__empty-msg {
+	font-family: 'Fira Sans', sans-serif;
+	margin-top: 3rem;
+	font-size: 1.2rem;
+	text-align: center;
+	letter-spacing: 0.1rem;
+	line-height: 1.5;
+}
+
+.order-section__total {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 1.3rem;
+	margin-top: 2rem;
+}
+
+.order-section__pay {
+	font-family: 'Sansita One', sans-serif;
+	font-size: 2rem;
+	color: var(--heading-clr);
+}

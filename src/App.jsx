@@ -1,28 +1,49 @@
 import React from 'react';
+import './index.css';
+import SwipeNav from './components/SwipeNavigation/SwipeNavigation';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import DetailedEventPage from './pages/DetailedEventPage/DetailedEventPage';
+import CartOrderPage from './pages/CartOrderPage/CartOrderPage';
+import ConfirmationPage from './pages/ConfirmationPage/ConfirmationPage';
 
-import Lottie from 'lottie-react';
-import animationData from './assets/loadingAnimation.json'; 
-// LOADING ANIMASJON TIL SENERE
+// All routing in the app
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: (
+			<>
+				<SwipeNav />
+			</>
+		),
+	},
+	{
+		path: '/event/:id',
+		element: (
+			<>
+				<DetailedEventPage />
+			</>
+		),
+	},
+	{
+		path: '/cart',
+		element: (
+			<>
+				<CartOrderPage />
+			</>
+		),
+	},
+	{
+		path: '/confirmation',
+		element: (
+			<>
+				<ConfirmationPage />
+			</>
+		),
+	},
+]);
 
 function App() {
-  let myName = 'Bob';
-  let isCool = true;
-
-  return (
-    <div className="app">
-      <h1 className="title">
-        {myName} er {isCool ? '' : 'ikke'} kul
-      </h1>
-
-      <Lottie
-        animationData={animationData}
-        loop
-        autoplay
-        style={{ width: 300, height: 300 }}
-      /> 
-      {/* LOADING ANIMASJON TIL SENERE */}
-    </div>
-  );
+	return <RouterProvider router={router} />;
 }
 
 export default App;
