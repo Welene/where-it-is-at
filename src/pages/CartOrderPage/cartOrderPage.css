@@ -15,9 +15,8 @@
 	border-radius: 0.2rem;
 	display: flex;
 	flex-direction: column;
-	/* align-items: center; */
-	width: 18rem;
-	max-width: 25rem;
+	width: 90%;
+	min-width: clamp(18rem, 50%, 22rem);
 	margin-top: 3rem;
 }
 
@@ -73,4 +72,16 @@
 	text-align: center;
 	letter-spacing: 0.1rem;
 	line-height: 1.5;
+}
+
+.order-section__total {
+	font-family: 'Fira Sans', sans-serif;
+	font-size: 1.3rem;
+	margin-top: 2rem;
+}
+
+.order-section__pay {
+	font-family: 'Sansita One', sans-serif;
+	font-size: 2rem;
+	color: var(--heading-clr);
 }

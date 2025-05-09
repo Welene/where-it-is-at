@@ -9,6 +9,7 @@ import HomePage from '../../pages/HomePage/HomePage';
 import EventsPage from '../../pages/EventsPage/EventsPage';
 import ConfirmationPage from '../../pages/ConfirmationPage/ConfirmationPage';
 
+// The pagination Swiper (slider)
 function SwipeNav() {
 	return (
 		<section className="swipe-section">
@@ -21,6 +22,7 @@ function SwipeNav() {
 				// navigation={true}
 				// scrollbar={{ draggable: true }}
 				className="swipe-section__navigation">
+				{/* I need 3 pagination slides */}
 				<SwiperSlide>
 					<HomePage />
 				</SwiperSlide>

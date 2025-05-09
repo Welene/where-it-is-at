@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './doneTicket.css';
 import barCode from '../../assets/bar.svg';
 
+// DoneTicket component for the ConfirmationPage, all articles is inside a scroll container
 function DoneTicket() {
 	const [tickets, setTickets] = useState([]);
 

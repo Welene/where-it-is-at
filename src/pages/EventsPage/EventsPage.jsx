@@ -1,7 +1,5 @@
 import React from 'react';
 import useFetch from '../../hooks/useFetch';
-import Lottie from 'lottie-react';
-import animationData from '../../assets/loadingAnimation.json';
 import Events from '../../components/Events/Events';
 import { useNavigate } from 'react-router-dom';
 import shoppingCart from '../../assets/cart.svg';
@@ -12,7 +10,7 @@ function EventsPage() {
 	const navigate = useNavigate();
 
 	const clickCart = () => {
-		navigate('/cart'); // function that navigates to cart page
+		navigate('/cart');
 	};
 
 	const {
@@ -20,19 +18,6 @@ function EventsPage() {
 		isLoading,
 		isError,
 	} = useFetch('https://santosnr6.github.io/Data/events.json');
-
-	if (isLoading) {
-		return (
-			<section className="loading-section">
-				<Lottie
-					animationData={animationData}
-					loop
-					autoplay
-					style={{ width: 300, height: 300 }}
-				/>
-			</section>
-		);
-	}
 
 	if (isError)
 		return (
@@ -57,7 +42,6 @@ function EventsPage() {
 							onClick={clickCart}
 						/>
 					</section>
-					{/* <Header title="Events" /> */}
 					<Title title="Events" />
 					<label htmlFor="searchField" className="invisible-label">
 						Search

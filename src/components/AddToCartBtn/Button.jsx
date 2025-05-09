@@ -1,16 +1,17 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './button.css';
+import { motion } from 'framer-motion';
 
 function Cart({ count, eventId, price, where, when, name, children, onClick }) {
 	const navigate = useNavigate();
 
 	const defaultClick = () => {
 		const oldCart = JSON.parse(localStorage.getItem('cart')) || [];
-		// vår oldCart har keyen "cart" -- vi lager cart til en array -- om det ikke er noe i den er den tom i starten
+		// vår (min* lol) oldCart har keyen "cart" -- vi lager cart til en array -- om det ikke er noe i den er den tom i starten
 		const existingIndex = oldCart.findIndex((item) => item.id === eventId);
 		// findIndex sjekker vår oldCart om vi allerede har et event med samme eventId i handlekurven/local storage
-		// gir oss indexen til det første som matcher // om ingen matcher finnes får man -1
+		// gir oss indexen til det første som matcher -- om ingen matcher finnes får man -1
 
 		// her lages det et nytt objekt med alle disse som skal være med
 		const newCartItem = {
@@ -43,13 +44,14 @@ function Cart({ count, eventId, price, where, when, name, children, onClick }) {
 	};
 
 	return (
-		<button
+		<motion.button
+			whileTap={{ scale: 1.1 }}
 			className="cart-btn"
 			onClick={onClick || defaultClick}
 			disabled={count < 1}>
 			{children || 'Add to cart'}
 			{/* defaultClick gjør at knappen kan brukes som både Lägg till varukorg-knapp og en knapp som Skickar order og oppdaterer LS. Uten denne vil Lägg till varukorg knappen styre over Skicka order knappen og Skicka Order knappen får ikke oppdatert LS. */}
-		</button>
+		</motion.button>
 	);
 }
 

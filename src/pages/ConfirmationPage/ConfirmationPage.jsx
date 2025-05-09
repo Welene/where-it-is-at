@@ -19,16 +19,17 @@ function ConfirmationPage() {
 					<img
 						className="return"
 						src={leftArrow}
-						alt="Navigate back arrow"
+						alt="Back"
 						onClick={clickReturn}
 					/>
 					<img
 						className="cart"
 						src={shoppingCart}
-						alt="Shopping cart"
+						alt="Cart"
 						onClick={clickCart}
 					/>
 				</section>
+
 				<Title title="Tickets" />
 				<DoneTicket />
 			</section>

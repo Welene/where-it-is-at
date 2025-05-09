@@ -1,9 +1,8 @@
 .page-home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Fira Sans X-Light', sans-serif;
-    font-style: italic;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Fira Sans X-Light', sans-serif;
+	font-style: italic;
 }
-
